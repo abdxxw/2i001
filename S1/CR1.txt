@@ -1,0 +1,137 @@
+=======================================  TME1  =============================================
+############################## BOUSBA Abdellah 3804891 #####################################
+============================================================================================
+
+ ==============
+|| Exercice7: ||
+ ==============
+
+pour realiser l'affichage de 0 à N-1 on crée d'abord un fichier C dans avec la commande gedit exo7.c
+on doit implementer une fonction qui ne retourne rien ( void ) et a comme parametre le nombre d'entiers 
+qu'on veut afficher sans oublier la bibliotèque <stdio.h>
+cette fonction dois etre avant le main et contien une boucle for qui fait un simple affichage d'entier,
+on utilise \n pour sauter la ligne. 
+
+#include <stdio.h>
+
+void affichage(int n){
+	int i=0;
+	for(i=0;i<n;i++){
+		printf("%d\n",i);
+	}
+}
+
+
+la fonction main fait appel a la fonction affichage.
+
+
+int main(){
+
+affichage(10);
+return 0;
+}
+
+
+============================================================================================
+
+ ==============
+|| Exercice8: ||
+ ==============
+
+1.pour ecrire la fonction afficherlab on utilise deux boucle imbriquées, on afficher "+--------+" avant et apres 
+les boucle et a chaque fin de la boucle interieure un \n 
+on utilise le tableau palette pour afficher ' ' ou '*' 
+
+void afficher_lab(int lab[DIM][DIM], char palette[]){
+   printf("+--------+\n");
+   for(i=0;i<DIM;i++){
+  printf("|");
+	for(j=0;j<DIM;j++){
+		printf("%c",palette[lab[i][j]]);
+
+}
+		printf("|\n");
+}
+   printf("+--------+\n");
+}
+
+
+
+2.la fonction chercher_chemin est une fonction qui fait appelà chercher_chemin_rec avec cc =0 et lc=0,
+ cette dernier fait tout le travail.
+
+
+
+
+int chercher_chemin(int lab[DIM][DIM]){
+
+return chercher_chemin_rec(lab,0,0);
+}
+
+
+
+pour la  fonction cherche_chemin_rec on doit defir les cas de base :
+
+1-si aucun coté n'égale à 0 on retourne 0
+2-si on est a la derniere case ( DIM-1,DIM-1) on retourne 1
+
+dans toutes les cas on mets la case actuel a 2.
+
+pour le traitement on verifie les 4 coté un par un dans l'ordre demandé dans l'exercice si c'est egale a 0 on passe
+a cette case (sans oublier de rester dans l'intervalle [0,DIM-1][0,DIM-1], si aucune n'est egale a 0 on met la case a 3.
+
+si on est bloqué on retourne 0.
+
+
+int chercher_chemin_rec(int lab[DIM][DIM], int lc, int cc){
+
+
+lab[lc][cc]=2;
+
+if ((lab[lc+1][cc] != 0 )&&(lab[lc][cc+1] != 0)&&(lab[lc-1][cc] != 0)&&(lab[lc][cc-1] = 0))
+	return 0;
+
+if((lc == DIM-1)&& (cc == DIM-1))
+ return 1;
+
+if((lab[lc][cc+1] == 0)&&(cc+1<DIM))
+ return chercher_chemin_rec(lab,lc,cc+1);
+else if((lab[lc+1][cc] == 0)&&(lc+1<DIM))
+ return chercher_chemin_rec(lab,lc+1,cc);
+else if((lab[lc][cc-1] == 0)&&(cc-1>=0))
+ return chercher_chemin_rec(lab,lc,cc-1);
+else if((lab[lc-1][cc] == 0)&&(lc-1>=0))
+ return chercher_chemin_rec(lab,lc-1,cc);
+else {lab[lc][cc] = 3;
+
+
+}
+  return 0;
+
+}
+
+
+
+3.pour tester les fonction on les appelle dans la fonction main et on on ajoute des instruction pour afficher 
+la matrice et confirmer le resultat.
+
+int main(){
+
+char palette[2] = {' ','*'};
+int laby[DIM][DIM] = {{0,0,1,0,0,0,1,1},{1,0,0,1,1,0,1,0},{1,0,1,1,1,0,0,0},{1,0,0,1,0,0,1,1},{0,1,0,0,0,1,0,1},{0,0,0,1,0,1,0,1},{1,1,1,1,0,0,0,0},{1,0,1,1,0,0,0,0}};
+
+
+afficher_lab(laby,palette);
+
+printf("%d\n",chercher_chemin(laby));
+
+int i,j;
+for(i=0;i<DIM;i++){
+	for(j=0;j<DIM;j++){
+		printf("%d",laby[i][j]);
+}
+printf("\n");
+}
+
+
+

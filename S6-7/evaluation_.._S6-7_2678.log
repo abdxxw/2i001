@@ -1,0 +1,79 @@
+=================
+Correction de la question bouger
+Evaluer files Makefile ecosys.h ecosys.c
+Fichier Makefile trouve.
+Fichier ecosys.h trouve.
+Fichier ecosys.c trouve.
+Note 3/3
+Construction cible check_bouger: OK
+Note 1/1
+Running suite(s): ecosys
+100%: Checks: 5, Failures: 0, Errors: 0
+check_bouger.c:60:P:Test ecosys:test_bouger:0: Passed
+check_bouger.c:60:P:Test ecosys:test_bouger:0: Passed
+check_bouger.c:60:P:Test ecosys:test_bouger:0: Passed
+check_bouger.c:60:P:Test ecosys:test_bouger:0: Passed
+check_bouger.c:60:P:Test ecosys:test_bouger:0: Passed
+Note 5/5
+=================
+=================
+Correction de la question reproduce
+Construction cible check_reproduce: OK
+Note 1/1
+Running suite(s): ecosys
+cpt=8
+cpt=8
+cpt=8
+cpt=8
+cpt=8
+100%: Checks: 5, Failures: 0, Errors: 0
+check_reproduce.c:54:P:Test reproduction:test_reproduce:0: Passed
+check_reproduce.c:54:P:Test reproduction:test_reproduce:0: Passed
+check_reproduce.c:54:P:Test reproduction:test_reproduce:0: Passed
+check_reproduce.c:54:P:Test reproduction:test_reproduce:0: Passed
+check_reproduce.c:54:P:Test reproduction:test_reproduce:0: Passed
+Note 5/5
+=================
+=================
+Correction de la question proie
+Construction cible check_proie: OK
+Note 1/1
+Running suite(s): ecosys
+100%: Checks: 5, Failures: 0, Errors: 0
+check_proie.c:70:P:Test proie:test_proie:0: Passed
+check_proie.c:70:P:Test proie:test_proie:0: Passed
+check_proie.c:70:P:Test proie:test_proie:0: Passed
+check_proie.c:70:P:Test proie:test_proie:0: Passed
+check_proie.c:70:P:Test proie:test_proie:0: Passed
+Note 5/5
+=================
+=================
+Correction de la question animalXY
+Construction cible check_animalXY: OK
+Note 1/1
+Running suite(s): ecosys
+100%: Checks: 5, Failures: 0, Errors: 0
+check_animalXY.c:51:P:Test animalXY:test_animalXY:0: Passed
+check_animalXY.c:51:P:Test animalXY:test_animalXY:0: Passed
+check_animalXY.c:51:P:Test animalXY:test_animalXY:0: Passed
+check_animalXY.c:51:P:Test animalXY:test_animalXY:0: Passed
+check_animalXY.c:51:P:Test animalXY:test_animalXY:0: Passed
+Note 5/5
+=================
+=================
+Correction de la question predateur
+Construction cible check_predateur: OK
+Note 1/1
+Running suite(s): ecosys
+100%: Checks: 5, Failures: 0, Errors: 0
+check_predateur.c:88:P:Test predateur:test_predateur:0: Passed
+check_predateur.c:88:P:Test predateur:test_predateur:0: Passed
+check_predateur.c:88:P:Test predateur:test_predateur:0: Passed
+check_predateur.c:88:P:Test predateur:test_predateur:0: Passed
+check_predateur.c:88:P:Test predateur:test_predateur:0: Passed
+Note 5/5
+=================
+*********************
+Note finale: 33/33
+Note finale /20: 20/20
+*********************
